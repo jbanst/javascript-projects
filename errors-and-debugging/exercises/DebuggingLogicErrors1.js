@@ -30,3 +30,5 @@ if (launchReady) {
 } else {
    console.log('Launch scrubbed.');
 }
+
+//the code ran, but the outcome was incorrect.  It should have ended in 'Launch scrubbed.'

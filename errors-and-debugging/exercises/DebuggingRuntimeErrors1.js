@@ -4,7 +4,7 @@
 let launchReady = false;
 let fuelLevel = 17000;
 
-if (fuellevel >= 20000) {
+if (fuelLevel >= 20000) { //variable fuelLevel was mistyped with a lowercase L
    console.log('Fuel level cleared.');
    launchReady = true;
 } else {
