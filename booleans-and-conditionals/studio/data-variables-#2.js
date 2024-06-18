@@ -13,7 +13,7 @@ let fuelTempCelsius = -225;
 const minimumFuelTemp = -300;
 const maximumFuelTemp = -150;
 let fuelLevel = "100%"; 
-let weatherStatus = "clear";
+let weatherStatus = !"clear";
 let preparedForLiftOff = true;
 
 
@@ -21,50 +21,40 @@ let preparedForLiftOff = true;
 
 if (astronautCount <= 7) {
     (preparedForLiftOff = true);
-    } else {
-        (preparedForLiftOff = false);
 }
 
 // add logic below to verify all astronauts are ready
 
-if (astronautStatus === "ready") {
+else if (astronautStatus === "ready") {
     (preparedForLiftOff = true);
-    } else {
-        (preparedForLiftOff = false);
 }
 
 // add logic below to verify the total mass does not exceed the maximum limit of 850000
 
-if (totalMassKg <= maximumMassLimit) {
+else if (totalMassKg <= maximumMassLimit) {
     (preparedForLiftOff = true);
-    } else {
-        (preparedForLiftOff = false);
-    }
-
+} 
+    
 // add logic below to verify the fuel temperature is within the appropriate range of -150 and -300
 
-if (fuelTempCelsius < -150 && fuelTempCelsius > -300) {
+else if (fuelTempCelsius < -150 && fuelTempCelsius > -300) {
     (preparedForLiftOff = true);
-    } else {
-        (preparedForLiftOff = false);
-    }
+}
 
 // add logic below to verify the fuel level is at 100%
 
-if (fuelLevel === "100%") {
+else if (fuelLevel === "100%") {
     (preparedForLiftOff = true);
-    } else {
-        (preparedForLiftOff = false);
-    }
+}
 
 // add logic below to verify the weather status is clear
 
-if (weatherStatus === "clear") {
+else if (weatherStatus === "clear") {
     (preparedForLiftOff = true);
-    } else {
-        (preparedForLiftOff = false);
-    }
-
+}
+else {
+    (preparedForLiftOff = false);
+}
 // Verify shuttle launch can proceed based on above conditions
 
 if (preparedForLiftOff = true) {
@@ -80,5 +70,7 @@ if (preparedForLiftOff = true) {
     console.log("Fuel Temperature: " + fuelTempCelsius + " °C");
     console.log("Weather Status: " + weatherStatus);
     console.log("----------------------------------------------------------------");
-    console.log("Have a safe trip astronauts!")
+    console.log("Have a safe trip astronauts!");
+} else {
+    console.log("LAUNCH ABORTED! CHECK SHUTTLE SYSTEMS!");
 }
